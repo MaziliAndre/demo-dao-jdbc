@@ -19,11 +19,18 @@ public class Program2 {
 		for (Department obj : list) {
 			System.out.println(obj);
 		}
-		
+		/*
 		System.out.println("\n=== TEST 3: department insert");
 		Department newDepartment = new Department(null, "DVDs");
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! New ID: " + newDepartment.getId());
+		*/
+		
+		System.out.println("\n=== TEST 4: department update");
+		department = departmentDao.findById(8);
+		department.setName("BluRays");
+		departmentDao.update(department);
+		System.out.println("Update Completed!");
 
 	}
 
